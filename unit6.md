@@ -48,11 +48,11 @@ A sustainable city minimises environmental impact while providing high quality o
 
 The Hong Kong government applies innovation and technology across **three areas** — economy, environment, and society — to promote sustainable development.
 
-| Group | Initiatives | How it supports sustainable development |
-|-------|-------------|----------------------------------------|
-| **Economy** | • Support green industries — subsidies and incentives for environmental technology businesses<br>• Subsidise transport companies to use low-emission cars (e.g. electric buses, hybrid taxis)<br>• Promote green building designs in commercial buildings (e.g. BEAM Plus certification, energy-efficient lighting systems)<br>• Smart energy meters — help businesses track and reduce energy use<br>• iAM Smart platform — e-government services for businesses | Promotes **economic sustainability** by shifting the economy toward green industries and cleaner transport, while reducing commercial energy consumption and operational costs |
-| **Environment** | • Develop waste-to-energy technology — incinerate waste to generate electricity, reducing landfill volume<br>• Introduce smart waste management system — sensors on bins to monitor fill levels, optimise collection routes | Supports **environmental sustainability** by reducing landfill waste, generating clean energy, and making waste collection more efficient |
-| **Society** | • Install sensors on main roads to collect real-time traffic data — manage congestion, improve travel efficiency<br>• Develop mobile apps to facilitate the use of government services (e.g. iAM Smart, GovHK)<br>• e-Health services — online medical consultations, electronic health records<br>• GovWiFi — free public Wi-Fi for digital access | Advances **social sustainability** by improving transport efficiency, simplifying access to government services, and enhancing digital inclusion and healthcare access for residents |
+| Group | Initiatives |
+|-------|-------------|
+| **Economy** | • Support green industries — subsidies and incentives for environmental technology businesses<br>• Subsidise transport companies to use low-emission cars (e.g. electric buses, hybrid taxis)<br>• Promote green building designs in commercial buildings (e.g. BEAM Plus certification, energy-efficient lighting systems)<br>• Smart energy meters — help businesses track and reduce energy use<br>• iAM Smart platform — e-government services for businesses |
+| **Environment** | • Develop waste-to-energy technology — incinerate waste to generate electricity, reducing landfill volume<br>• Introduce smart waste management system — sensors on bins to monitor fill levels, optimise collection routes |
+| **Society** | • Install sensors on main roads to collect real-time traffic data — manage congestion, improve travel efficiency<br>• Develop mobile apps to facilitate the use of government services (e.g. iAM Smart, GovHK)<br>• e-Health services — online medical consultations, electronic health records<br>• GovWiFi — free public Wi-Fi for digital access |
 
 > **📌 Exam tip:** For "how can technology help sustainability" questions, organise your answer by the three groups — name a HK example in each of economy, environment, and society. "Smart lampposts" (environment + society) and "HKeMobility app" (society) are good examples.
 
