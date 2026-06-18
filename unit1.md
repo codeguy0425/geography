@@ -65,15 +65,21 @@ People travel abroad for various reasons related to **recreation**:
 | Term | Definition |
 |------|------------|
 | Recreation | Activities done during leisure time for enjoyment and relaxation |
-| Leisure time | Free time when a person is not working, studying, or doing other duties |
+| Leisure | Free time when not working or studying; allows people to rest and pursue personal interests |
 | Peak season | Period when many people travel (e.g. Easter, Christmas), leading to crowded airports and higher prices |
-| Budget airline | Low-cost airline that offers cheaper airfares by charging for extras (e.g. meals, luggage) |
-| High-speed rail | Fast rail service connecting HK to Mainland China (e.g. Guangzhou, Beijing) |
-| HK-Zh-Macao Bridge | World's longest sea-crossing bridge connecting Hong Kong, Zhuhai, and Macao |
+| Budget airline | Low-cost airline that offers cheaper airfares by charging only for basic services |
+| Guangzhou-Shenzhen-Hong Kong High-Speed Rail | Express rail link connecting Hong Kong to Shenzhen and Guangzhou in under an hour |
+| Hong Kong-Zhuhai-Macao Bridge | World's longest sea-crossing bridge connecting Hong Kong, Zhuhai, and Macao |
 | Kai Tak Cruise Terminal | Cruise terminal at the former Kai Tak Airport, serving international cruise ships |
 | One-stop travel service | Service that provides flights, hotels, tours, and insurance through a single provider |
 | Paid annual leave | Paid time off from work that employees can use for holidays and travel |
 | Travel agency | A business that arranges travel packages, bookings, and itineraries for customers |
+| Time zones | Regions of the Earth that observe the same local time, each spanning roughly 15° of longitude |
+| GMT | Greenwich Mean Time — the mean solar time at the Prime Meridian (0° longitude) |
+| International Date Line | Line at approximately 180° longitude where the calendar date changes by one day when crossed |
+| Prime Meridian | The line of 0° longitude passing through Greenwich, England; reference for time zones |
+| Cultural heritage | Traditions, customs, historic buildings, and artefacts passed down through generations |
+| GDP | Gross Domestic Product — the total value of goods and services produced within a country |
 
 ---
 
