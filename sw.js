@@ -1,4 +1,4 @@
-const CACHE = 's1-geo-v2';
+const CACHE = 's1-geo-v3';
 const URLS = [
   '.',
   'index.html',
@@ -19,7 +19,11 @@ const URLS = [
   'unit6/',
   'unit6/index.html',
   'unit6/6-1.html',
-  'unit6/6-2.html'
+  'unit6/6-2.html',
+  'unit2/',
+  'unit2/index.html',
+  'unit2/2-1.html',
+  'unit2/2-2.html'
 ];
 
 self.addEventListener('install', e => {

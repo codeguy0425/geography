@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.2 Problems of Tourism | Unit 2</title>
+<style>
+  :root {
+    --primary: #6c3483;
+    --primary-light: #e8daef;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--primary-light);
+  }
+
+  .page-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #6c3483 0%, #a569bd 100%);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin-top: 6px;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-top: 12px;
+  }
+
+  .exam-tip {
+    background: #fef9e7;
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .exam-tip strong {
+    color: #b7950b;
+  }
+
+  .teacher-note {
+    background: #eafaf1;
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .teacher-note strong {
+    color: #1e8449;
+  }
+
+  .trap {
+    background: #fdedec;
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .trap strong {
+    color: #c0392b;
+  }
+
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #6c3483;
+    margin: 20px 0 10px;
+  }
+
+  .section h4 {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 14px 0 6px;
+  }
+
+  .section p {
+    font-size: .94rem;
+  }
+
+  .section ul {
+    margin: 8px 0 8px 20px;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .section ul strong {
+    color: var(--primary);
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 24px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .section { padding: 20px 18px; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .section { break-inside: avoid; border: 1px solid #ccc; }
+    .hero { background: #6c3483 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .exam-tip, .teacher-note, .trap { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to Unit 2 hub</a>
+
+  <nav class="page-nav">
+    <a href="2-1.html">2.1 Benefits</a>
+    <a href="2-2.html">2.2 Problems</a>
+  </nav>
+
+  <div class="hero">
+    <h1>2.2 What Problems Do Tourists Bring to the Host Areas?</h1>
+    <div class="sub">E7 Tourism · S1 Geography Final Revision</div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- ECONOMIC PROBLEMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Economic problems</h2>
+    <ul>
+      <li><strong>Rise in living costs</strong> for local people (e.g. higher land rents, property prices)</li>
+      <li><strong>Over-reliance on tourism</strong> may badly affect the economy when the number of tourists decreases (e.g. during a pandemic or recession)</li>
+    </ul>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- ENVIRONMENTAL PROBLEMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Environmental problems</h2>
+    <ul>
+      <li><strong>Pollution</strong> (air pollution from planes and cars, water pollution from cruise ships, littering)</li>
+      <li><strong>Environmental damage</strong> (habitat destruction from resort construction, coral reef damage from diving)</li>
+    </ul>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SOCIAL PROBLEMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Social problems</h2>
+    <ul>
+      <li><strong>Conflict with local people</strong> (tourist behaviour that disrespects local norms)</li>
+      <li><strong>More bars and casinos</strong> may cause crime and family problems</li>
+      <li><strong>Overcrowding and loud noise</strong> disturb the local people's daily life</li>
+    </ul>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CULTURAL PROBLEMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Cultural problems</h2>
+    <ul>
+      <li><strong>Changes in traditional cultures</strong> and lifestyles of local people</li>
+      <li><strong>Cultural conflict</strong> between tourists and locals</li>
+      <li><strong>Loss of local characteristics</strong> (shops become souvenir stalls, traditions become performances)</li>
+    </ul>
+
+    <div class="trap">
+      <strong>⚠️ MC trap:</strong> "Which is NOT an economic problem of tourism?" → "Providing jobs for local people" is a benefit, not a problem. Watch for distractors that list benefits instead of problems.
+    </div>
+  </div>
+
+  <div style="text-align:center; padding:20px 0 10px; font-size:.8rem; color:var(--text-muted);">
+    E7 Tourism · S1 Geography Final Revision · 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>

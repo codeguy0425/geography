@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 – Is Tourism Good or Bad? | Study Guide</title>
+<style>
+  :root {
+    --primary: #6c3483;
+    --primary-light: #e8daef;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--primary-light);
+  }
+
+  .page-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #6c3483 0%, #a569bd 100%);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin-top: 6px;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-top: 12px;
+  }
+
+  .exam-tip {
+    background: #fef9e7;
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .exam-tip strong {
+    color: #b7950b;
+  }
+
+  .teacher-note {
+    background: #eafaf1;
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .teacher-note strong {
+    color: #1e8449;
+  }
+
+  .trap {
+    background: #fdedec;
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .trap strong {
+    color: #c0392b;
+  }
+
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #6c3483;
+    margin: 20px 0 10px;
+  }
+
+  .section h4 {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 14px 0 6px;
+  }
+
+  .section p, .section li {
+    font-size: .94rem;
+  }
+
+  .section ul {
+    margin: 8px 0 8px 20px;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .section ul strong {
+    color: var(--primary);
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .term-card {
+    background: #f4f6f8;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+
+  .term-card .term {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .9rem;
+  }
+
+  .term-card .def {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: .9rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 2px;
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+
+  .q-box {
+    background: #f4f9ff;
+    border: 1px solid #d4e6f1;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .q-box .q-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+  }
+
+  .q-box .q-text {
+    font-size: .92rem;
+  }
+
+  .q-box .answer {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #ccc;
+  }
+
+  .mc-options {
+    margin: 6px 0 0 18px;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  .mc-options .correct {
+    font-weight: 700;
+    background: #d5f5e3;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  .subpage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .subpage-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    transition: box-shadow .15s, transform .15s;
+  }
+
+  .subpage-card:hover {
+    box-shadow: 0 3px 12px rgba(108,52,131,.12);
+    transform: translateY(-2px);
+  }
+
+  .subpage-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  .subpage-card p {
+    font-size: .85rem;
+    color: #555;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 24px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .section { padding: 20px 18px; }
+    .terms-grid { grid-template-columns: 1fr; }
+    .subpage-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .section { break-inside: avoid; border: 1px solid #ccc; }
+    .hero { background: #6c3483 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .exam-tip, .teacher-note, .trap { break-inside: avoid; }
+    .q-box { break-inside: avoid; }
+    .term-card { break-inside: avoid; }
+    .subpage-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="../index.html" class="back-link">← Back to exam hub</a>
+
+  <nav class="page-nav">
+    <a href="#benefits">2.1</a>
+    <a href="#problems">2.2</a>
+    <a href="#key-terms">Key terms</a>
+    <a href="#questions">Questions</a>
+    <a href="#checklist">Checklist</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Unit 2 – Is Tourism Good or Bad for Local People?</h1>
+    <div class="sub">E7 Tourism · S1 Geography Final Revision</div>
+    <div class="badge">Appears in Section C</div>
+  </div>
+
+  <div class="exam-tip">
+    <strong>📌 Exam tip:</strong> Unit 2 appears in Section C (Structured Questions). You will be asked to describe benefits and/or problems of tourism in a host area. Always give specific examples and explain both economic and socio-cultural impacts for higher marks.
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SUB-PAGE NAVIGATION -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Units in this topic</h2>
+    <div class="subpage-grid">
+      <a href="2-1.html" class="subpage-card">
+        <h3>2.1 Benefits of Tourism</h3>
+        <p>Economic, social, environmental, and cultural benefits tourists bring to host areas</p>
+      </a>
+      <a href="2-2.html" class="subpage-card">
+        <h3>2.2 Problems of Tourism</h3>
+        <p>Economic, environmental, social, and cultural problems caused by tourism</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- KEY TERMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="key-terms">Key terms — quick revision cards</h2>
+    <div class="terms-grid">
+      <div class="term-card">
+        <div class="term">Host area</div>
+        <div class="def">The place that tourists visit and where tourism takes place</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Economic benefit</div>
+        <div class="def">Positive financial impact such as jobs, income, and tax revenue</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Social benefit</div>
+        <div class="def">Improved services and living standards for local people</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Environmental conservation</div>
+        <div class="def">Protecting nature and wildlife through tourism awareness</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Cultural exchange</div>
+        <div class="def">Sharing of traditions and ideas between tourists and locals</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Cultural heritage</div>
+        <div class="def">Historic buildings, traditions, and customs preserved for future generations</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Over-reliance on tourism</div>
+        <div class="def">Depending too heavily on tourism, risking economic instability</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Overcrowding</div>
+        <div class="def">Too many tourists in one area, causing discomfort for locals</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Cultural conflict</div>
+        <div class="def">Tension between tourists' behaviour and local customs</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Loss of local characteristics</div>
+        <div class="def">Traditional culture fading due to tourist influence</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PRACTICE QUESTIONS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="questions">Exam-style practice questions</h2>
+
+    <h3>Multiple Choice (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q1</div>
+      <div class="q-text">Which of the following is an economic benefit of tourism?</div>
+      <div class="mc-options">
+        A. Cultural exchange<br>
+        B. <span class="correct">Providing jobs and income to local people</span><br>
+        C. Environmental pollution<br>
+        D. Loss of local characteristics
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q2</div>
+      <div class="q-text">Which of the following is a social problem caused by tourism?</div>
+      <div class="mc-options">
+        A. Higher tax revenue<br>
+        B. Preservation of cultural heritage<br>
+        C. <span class="correct">Overcrowding and noise disturbing local people</span><br>
+        D. Improved infrastructure
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q3</div>
+      <div class="q-text">Over-reliance on tourism is dangerous because:</div>
+      <div class="mc-options">
+        A. It increases cultural exchange<br>
+        B. <span class="correct">A drop in tourist numbers can badly affect the economy</span><br>
+        C. It protects the environment<br>
+        D. It creates more job opportunities
+      </div>
+    </div>
+
+    <h3>True or False (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q4</div>
+      <div class="q-text">"Tourism only brings economic benefits to host areas."</div>
+      <div class="answer"><strong>False</strong> — tourism also brings social, environmental, cultural benefits as well as problems.</div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q5</div>
+      <div class="q-text">"Tourism can help preserve cultural heritage."</div>
+      <div class="answer"><strong>True</strong> — tourism creates incentives to preserve historic buildings, traditions, and customs.</div>
+    </div>
+
+    <h3>Structured Question (6 marks)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q6</div>
+      <div class="q-text">
+        <p><strong>(a)</strong> Describe two economic benefits of tourism for a host area. (2 marks)</p>
+        <p><strong>(b)</strong> Explain two social or environmental problems caused by tourism. (4 marks)</p>
+      </div>
+      <div class="answer">
+        <strong>Suggested structure:</strong><br>
+        (a) Tourism provides jobs and income for local people (e.g. hotel staff, tour guides). It also increases tax revenue for the local government, which can be used to improve infrastructure.<br>
+        (b) Overcrowding disturbs local people's daily lives with noise and congestion. Environmental damage such as pollution from tourist transport and littering harms the natural environment.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CHECKLIST -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="checklist">✅ Revision checklist</h2>
+    <p style="font-size:.88rem; color:#555; margin-bottom:10px;">Tick each box as you revise:</p>
+    <ul class="checklist">
+      <li>I can describe the economic, social, environmental, and cultural benefits of tourism</li>
+      <li>I can describe the economic, environmental, social, and cultural problems caused by tourism</li>
+      <li>I can explain what "host area" means</li>
+      <li>I understand why over-reliance on tourism is risky for a local economy</li>
+      <li>I know examples of environmental damage from tourism (pollution, habitat destruction)</li>
+      <li>I can explain how tourism causes cultural conflict and loss of local characteristics</li>
+      <li>I can give specific examples for each type of benefit and problem</li>
+      <li>I can structure a 6-mark answer using the point-explanation-example framework</li>
+    </ul>
+  </div>
+
+  <div style="text-align:center; padding:20px 0 10px; font-size:.8rem; color:var(--text-muted);">
+    E7 Tourism · S1 Geography Final Revision · 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>
