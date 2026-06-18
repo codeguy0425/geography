@@ -25,20 +25,28 @@
 
 ### 6.1.2 What is a sustainable city?
 
-A sustainable city minimises environmental impact while providing high quality of life.
+A sustainable city balances **social, economic, and environmental** features.
 
-**Key characteristics:**
-- **Green spaces** — parks, green roofs, urban forests
-- **Efficient public transport** — extensive railway, buses
-- **Renewable energy** — solar, wind
-- **Waste reduction** — recycling, waste-to-energy
-- **Green buildings** — energy-efficient design, BEAM Plus certification in HK
-- **Clean air and water** — pollution controls, sewage treatment
-- **Walkability and cycling** — pedestrian-friendly streets, bike lanes
-- **Community participation** — residents involved in planning
-- **Resilience** — preparing for climate change impacts
+**Society:**
+- **Good social welfare** — medical care, healthcare access, social services for vulnerable groups
+- **Green areas and open space** — parks, gardens, recreational areas for public well-being
+- **Equal education opportunities** — accessible schooling for all levels
+- **Affordable housing** — quality housing for all income groups
+- **Public participation in policymaking** — residents involved through consultations
 
-> **⚠️ MC trap:** "Which is NOT a characteristic of a sustainable city?" → **Building more highways for cars** (sustainable cities prioritise public transport and walkability, not car-centric infrastructure).
+**Economy:**
+- **Green and high-tech industries** — eco-friendly businesses, innovation-driven growth
+- **Diversified economy and job opportunities** — stable employment across sectors
+- **Traditional and local economic activities** — local markets, cultural industries
+- **Subsidies and training for businesses** — help adopt sustainable practices, upskill workers
+
+**Environment:**
+- **Reduces and recycles waste at source** — minimise waste, separate and recycle materials
+- **Renewable energy** — solar, wind, and other clean energy sources
+- **Improves public transport systems** — expand railway networks to reduce car dependency
+- **Green building designs** — rooftop greening, energy-efficient buildings, sustainable materials
+
+> **⚠️ MC trap:** "Which is NOT a characteristic of a sustainable city?" → **Building more highways for cars** (sustainable cities prioritise public transport, green spaces, and people's well-being over car-centric infrastructure).
 
 ---
 
@@ -82,14 +90,15 @@ By putting people's needs first, urban planning can create a **more livable city
 |------|------------|
 | **Sustainable development** | Development that meets present needs without compromising future generations' ability to meet theirs |
 | **Three pillars** | Social, environmental, and economic sustainability — must all be balanced |
-| **Sustainable city** | A city that minimises environmental impact while providing high quality of life |
-| **Smart city** | A city that uses technology and data to improve efficiency, sustainability, and quality of life |
-| **People-oriented planning** | Urban planning that focuses on citizens' needs — medical care, education, infrastructure, recreation, and jobs — to create a livable city |
-| **15-minute neighbourhood** | A neighbourhood where daily needs (schools, shops, healthcare) are within 15 minutes' walk |
-| **Universal design** | Designing buildings and spaces to be accessible to all people, including elderly and disabled |
-| **Smart mobility** | Using technology (apps, smart traffic lights) to improve transport efficiency |
+| **Sustainable city** | A city that balances social well-being, economic vitality, and environmental protection for long-term livability |
+| **Green and high-tech industries** | Eco-friendly and innovation-driven businesses that support sustainable economic growth |
+| **Waste reduction at source** | Minimising waste generation and separating materials for recycling before disposal |
+| **Renewable energy** | Energy from natural sources that replenish themselves, such as solar and wind power |
+| **Public participation** | Involving residents in planning and policymaking through consultations and engagement |
+| **Affordable housing** | Housing that is reasonably priced so that low- to middle-income households can afford it |
 | **Brundtland Report** | 1987 UN report that defined sustainable development; also called *Our Common Future* |
-| **Green building** | Energy-efficient building designed to reduce environmental impact; BEAM Plus certified in HK |
+| **Green building design** | Energy-efficient buildings with green roofs, sustainable materials, and minimal environmental impact |
+| **Diversified economy** | An economy with a variety of industries, reducing reliance on any single sector |
 
 ---
 
@@ -109,19 +118,19 @@ By putting people's needs first, urban planning can create a **more livable city
 - C. 1992
 - D. 2000
 
-**Q3.** Which of the following is an example of **people-oriented planning**?
-- A. Building a new expressway through a residential area
-- B. **Creating walkable neighbourhoods with footbridge networks** ← correct
-- C. Zoning land exclusively for commercial use
-- D. Reducing public transport funding
+**Q3.** Which of the following is a **social characteristic** of a sustainable city?
+- A. Developing renewable energy
+- B. **Providing affordable housing** ← correct
+- C. Supporting high-tech industries
+- D. Building more highways
 
 ### Section B — True or False (1 mark each)
 
 **Q4.** "Sustainable development only focuses on environmental protection."
 → **False** — sustainable development balances three pillars: social, environmental, and economic.
 
-**Q5.** "A smart city uses technology and data to improve efficiency and quality of life."
-→ **True** — smart cities leverage technology (apps, sensors, data) to improve urban management.
+**Q5.** "Developing renewable energy is an example of an environmental feature of a sustainable city."
+→ **True** — renewable energy such as solar and wind power reduces reliance on fossil fuels and supports environmental sustainability.
 
 ### Section C — Structured Question (6 marks)
 
@@ -132,8 +141,8 @@ By putting people's needs first, urban planning can create a **more livable city
 **Suggested answer structure:**
 **(a)** Sustainable development is "development that meets the needs of the present without compromising the ability of future generations to meet their own needs" (Brundtland Report, 1987). It balances three pillars: social, environmental, and economic sustainability.
 
-**(b)** *Way 1:* Promote smart mobility through technology. For example, the HKeMobility app provides real-time transport information, helping people choose the most efficient route and reducing congestion and emissions.
-*Way 2:* Adopt people-oriented planning by addressing citizens' needs — for example, locating hospitals and schools within easy reach of residential areas, and providing parks and recreational spaces for public enjoyment.
+**(b)** *Way 1 (society):* Provide good social welfare such as medical care — locating hospitals and clinics within easy reach of residential areas, and increasing the number of healthcare professionals.
+*Way 2 (environment):* Develop renewable energy and improve public transport — for example, expanding the railway network to reduce car dependency and investing in solar power.
 
 ---
 
@@ -141,7 +150,9 @@ By putting people's needs first, urban planning can create a **more livable city
 
 - [ ] I can define sustainable development using the Brundtland definition
 - [ ] I can name and explain all three pillars (social, environmental, economic)
-- [ ] I can list at least 5 characteristics of a sustainable city
+- [ ] I can list all 13 features of a sustainable city organised by society, economy, and environment
 - [ ] I can explain how innovation and technology make HK more sustainable across three groups: economy, environment, and society
-- [ ] I can explain what people-oriented planning means (addressing needs for medical care, education, infrastructure, recreation, and jobs in urban design)
+- [ ] I can give at least two examples of social features (welfare, housing, education, green space, public participation)
+- [ ] I can give at least two examples of economic features (green industries, diversified economy, local activities, subsidies)
+- [ ] I can give at least two examples of environmental features (waste reduction, renewable energy, public transport, green buildings)
 - [ ] I can answer a 6-mark structured question on sustainability with specific HK examples
