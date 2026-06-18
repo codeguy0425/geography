@@ -1,0 +1,18 @@
+{
+  "name": "S1 Geography — Final Exam Revision",
+  "short_name": "S1 Geo",
+  "description": "Study guide for S1 Geography Final Examination (Hong Kong Curriculum)",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fafbfc",
+  "theme_color": "#1a5276",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

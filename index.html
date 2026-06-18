@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>S1 Geography — Final Exam Revision</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a5276">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
   :root {
     --primary: #1a5276;
@@ -396,5 +400,10 @@
   </div>
 
 </div>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
 </body>
 </html>
