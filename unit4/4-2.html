@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.2 Urban Decay Characteristics | Unit 4 Study Guide</title>
+<style>
+  :root {
+    --primary: #1a5276;
+    --primary-light: #d4e6f1;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--primary-light);
+  }
+
+  .page-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #2e86c1 100%);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin-top: 6px;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-top: 12px;
+  }
+
+  .exam-tip {
+    background: #fef9e7;
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .exam-tip strong {
+    color: #b7950b;
+  }
+
+  .teacher-note {
+    background: #eafaf1;
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .teacher-note strong {
+    color: #1e8449;
+  }
+
+  .trap {
+    background: #fdedec;
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .trap strong {
+    color: #c0392b;
+  }
+
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a5276;
+    margin: 20px 0 10px;
+  }
+
+  .section h4 {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 14px 0 6px;
+  }
+
+  .section p, .section li {
+    font-size: .94rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: .9rem;
+  }
+
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--primary-light);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+  }
+
+  tr:nth-child(even) td {
+    background: #f7f9fc;
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .term-card {
+    background: #f4f6f8;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+
+  .term-card .term {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .9rem;
+  }
+
+  .term-card .def {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: .9rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .checklist li::before {
+    content: "\2610";
+    position: absolute;
+    left: 2px;
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+
+  .q-box {
+    background: #f4f9ff;
+    border: 1px solid #d4e6f1;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .q-box .q-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+  }
+
+  .q-box .q-text {
+    font-size: .92rem;
+  }
+
+  .q-box .answer {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #ccc;
+  }
+
+  .mc-options {
+    margin: 6px 0 0 18px;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  .mc-options .correct {
+    font-weight: 700;
+    background: #d5f5e3;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    margin: 14px 0;
+    font-size: .88rem;
+    background: #f7f9fc;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  .flow-step {
+    background: var(--primary-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  .flow-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+  }
+
+  .sub-list {
+    margin: 8px 0 8px 20px;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .sub-list strong {
+    color: var(--primary);
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 24px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .section { padding: 20px 18px; }
+    .terms-grid { grid-template-columns: 1fr; }
+    table { font-size: .82rem; }
+    th, td { padding: 7px 8px; }
+    .flow { flex-direction: column; align-items: flex-start; }
+    .flow-arrow { display: none; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .section { break-inside: avoid; border: 1px solid #ccc; }
+    .hero { background: #1a5276 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .exam-tip, .teacher-note, .trap { break-inside: avoid; }
+    th { background: #d4e6f1 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tr:nth-child(even) td { background: #f7f9fc !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .q-box { break-inside: avoid; }
+    .term-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="back-link">&larr; Back to Unit 4 hub</a>
+
+  <nav class="page-nav">
+    <a href="4-1.html">4.1</a>
+    <a href="4-2.html">4.2</a>
+    <a href="4-3.html">4.3</a>
+  </nav>
+
+  <div class="hero">
+    <h1>4.2 &mdash; Urban Decay Characteristics</h1>
+    <div class="sub">S1 Geography Final Revision &middot; Hong Kong Curriculum</div>
+    <div class="badge">Appears in Section A &bull; B &bull; C</div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 4.2 Content -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>4.2 What are the characteristics of urban decay in old urban areas?</h2>
+    <p><strong>Section C favourite</strong> &mdash; expect a photo or map extract of an old district
+    (Sham Shui Po, Yau Ma Tei, Wan Chai) with labelled questions.</p>
+
+    <h3>4.2.1 Land use conflicts</h3>
+    <p>Land use conflict occurs when two incompatible land uses are too close to each other.</p>
+    <ul>
+      <li><strong>Residential vs. markets and garages</strong> &mdash; residential buildings located near markets and garages create a noisy and unpleasant living environment</li>
+      <li><strong>Residential vs. dangerous facilities</strong> &mdash; some people live close to hazardous facilities (e.g. gas stations, factories) that threaten their safety</li>
+      <li><strong>Mixed industrial and residential uses</strong> &mdash; factories next to flats (e.g. old Tsuen Wan, Cheung Sha Wan) cause noise, odour, and fire hazards</li>
+      <li><strong>Hawker zones vs. residents</strong> &mdash; street markets bring noise and rubbish alongside livelihood; tension between stall holders and nearby residents</li>
+    </ul>
+
+    <h3>4.2.2 Old and worn-out buildings</h3>
+    <p>Many buildings in old urban areas are over 40 years old and lack proper repair and maintenance.</p>
+    <ul>
+      <li><strong>Dilapidated appearance</strong> &mdash; cracked walls, peeling paint, rusted railings, exposed rebar</li>
+      <li><strong>Subdivided flats (&#21223;&#25151;)</strong> &mdash; single flat divided into 2+ smaller units with shared kitchen/toilet; multiple electricity meters on one landing</li>
+      <li><strong>Cage homes</strong> &mdash; partitioned bed spaces enclosed by metal mesh, ~0.5&ndash;1 m&sup2; per person</li>
+      <li><strong>Tong lau (&#21776;&#27004;)</strong> &mdash; pre-1960s tenement buildings, 3&ndash;6 storeys, no lifts, shared bathrooms; common in Wan Chai, Sheung Wan, Sham Shui Po</li>
+      <li><strong>Lack of maintenance</strong> &mdash; many buildings have no owners' corporation to organise repairs; owners often cannot agree or afford the cost</li>
+      <li><strong>Risk of collapse</strong> &mdash; buildings with poor structure may collapse, endangering lives</li>
+      <li><strong>Other safety hazards</strong> &mdash; illegal rooftop structures, exposed wiring, blocked fire exits, no sprinklers</li>
+      <li><strong>Strata-title ownership</strong> &mdash; each flat owner holds a share; redevelopment requires 80&ndash;90% owner consent, so repairs are often neglected</li>
+    </ul>
+
+    <h3>4.2.3 Lack of facilities</h3>
+    <p>In old urban areas, there is a general lack of open space such as parks and green belts.</p>
+    <ul>
+      <li><strong>No lifts</strong> in old tong lau &mdash; inaccessible for elderly and disabled residents</li>
+      <li><strong>Lack of open space</strong> &mdash; insufficient parks, green belts, and recreational areas</li>
+      <li><strong>Insufficient community and recreational facilities</strong> &mdash; existing facilities are inadequate or in poor condition</li>
+      <li><strong>Poor sanitation</strong> &mdash; shared toilets, inadequate sewage systems, rubbish accumulation in back alleys</li>
+      <li><strong>Inadequate parking and narrow streets</strong> &mdash; no off-street parking; loading/unloading blocks traffic</li>
+      <li><strong>Poor ventilation and natural lighting</strong> &mdash; buildings built close together; narrow alleys restrict airflow and sunlight</li>
+    </ul>
+
+    <h3>Districts commonly cited</h3>
+    <table>
+      <thead>
+        <tr><th>District</th><th>Key urban decay features</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Sham Shui Po</strong></td><td>Most textbook example; subdivided flats, cage homes, street markets, old tenements</td></tr>
+        <tr><td><strong>Yau Ma Tei / Mong Kok</strong></td><td>High density, narrow streets, mixed use (shops + residences), night markets</td></tr>
+        <tr><td><strong>Wan Chai</strong></td><td>Old tong lau alongside newer commercial towers; land use conflict</td></tr>
+        <tr><td><strong>Kwun Tong</strong></td><td>Old industrial area transitioning to redevelopment (e.g. Kwun Tong Town Centre project)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="text-align:center; padding:20px 0 10px; font-size:.8rem; color:var(--text-muted);">
+    S1 Geography &middot; Final Exam Revision &middot; 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>

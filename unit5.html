@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 5 – Solutions to Urban Problems | Study Guide</title>
+<style>
+  :root {
+    --primary: #1a5276;
+    --primary-light: #d4e6f1;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--primary-light);
+  }
+
+  .page-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a5276 0%, #27ae60 100%);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin-top: 6px;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-top: 12px;
+  }
+
+  .exam-tip {
+    background: #fef9e7;
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .exam-tip strong {
+    color: #b7950b;
+  }
+
+  .teacher-note {
+    background: #eafaf1;
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .teacher-note strong {
+    color: #1e8449;
+  }
+
+  .trap {
+    background: #fdedec;
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .trap strong {
+    color: #c0392b;
+  }
+
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a5276;
+    margin: 20px 0 10px;
+  }
+
+  .section p, .section li {
+    font-size: .94rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: .9rem;
+  }
+
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--primary-light);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+  }
+
+  tr:nth-child(even) td {
+    background: #f7f9fc;
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .term-card {
+    background: #f4f6f8;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+
+  .term-card .term {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .9rem;
+  }
+
+  .term-card .def {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: .9rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 2px;
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+
+  .q-box {
+    background: #f4f9ff;
+    border: 1px solid #d4e6f1;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .q-box .q-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+  }
+
+  .q-box .q-text {
+    font-size: .92rem;
+  }
+
+  .q-box .answer {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #ccc;
+  }
+
+  .mc-options {
+    margin: 6px 0 0 18px;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  .mc-options .correct {
+    font-weight: 700;
+    background: #d5f5e3;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    margin: 14px 0;
+    font-size: .88rem;
+    background: #f7f9fc;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  .flow-step {
+    background: var(--primary-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  .flow-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 24px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .section { padding: 20px 18px; }
+    .terms-grid { grid-template-columns: 1fr; }
+    table { font-size: .82rem; }
+    th, td { padding: 7px 8px; }
+    .flow { flex-direction: column; align-items: flex-start; }
+    .flow-arrow { display: none; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .section { break-inside: avoid; border: 1px solid #ccc; }
+    .hero { background: #1a5276 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .exam-tip, .teacher-note, .trap { break-inside: avoid; }
+    th { background: #d4e6f1 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tr:nth-child(even) td { background: #f7f9fc !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .q-box { break-inside: avoid; }
+    .term-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="back-link">← Back to index</a>
+
+  <nav class="page-nav">
+    <a href="#5-1">5.1</a>
+    <a href="#5-2">5.2</a>
+    <a href="#5-3">5.3</a>
+    <a href="#5-4">5.4</a>
+    <a href="#key-terms">Key terms</a>
+    <a href="#questions">Questions</a>
+    <a href="#checklist">Checklist</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Unit 5 – Solutions to Urban Problems</h1>
+    <div class="sub">S1 Geography Final Revision &middot; Hong Kong Curriculum</div>
+    <div class="badge">Appears in Section A &bull; B &bull; C &bull; Links to Unit 4</div>
+  </div>
+
+  <div class="exam-tip">
+    <strong>📌 Exam tip:</strong> For every urban problem in Unit 4, know at least one solution from Unit 5.
+    Structured questions often pair a problem with a solution — e.g. <em>"Explain one solution to traffic congestion."</em>
+    Name the solution, explain how it works, and give a specific Hong Kong example.
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 5.1 -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="5-1">5.1 How can we tackle housing problems?</h2>
+
+    <h3>5.1.1 Building new towns and new development areas</h3>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Develop new towns</strong></td><td>Build large-scale residential towns in the New Territories with housing, transport, and community facilities</td><td>Tseung Kwan O, Tin Shui Wai, Tung Chung</td></tr>
+        <tr><td><strong>New Development Areas (NDAs)</strong></td><td>Expand existing new towns or create new ones to provide more public and private housing</td><td>Kwu Tung North, Fanling North, Hung Shui Kiu</td></tr>
+        <tr><td><strong>Lantau Tomorrow Vision</strong></td><td>Reclaim artificial islands off Lantau to build a new city district</td><td>Planned project — will provide hundreds of hectares of land</td></tr>
+        <tr><td><strong>Transitional housing</strong></td><td>Short-term housing on vacant land while waiting for permanent public housing</td><td>Modular social housing in empty government sites</td></tr>
+        <tr><td><strong>Light public housing</strong></td><td>Quick-to-build prefabricated units for those waiting on traditional public housing</td><td>Launched 2023; faster to construct</td></tr>
+      </tbody>
+    </table>
+
+    <h3>5.1.2 Urban renewal</h3>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>URA redevelopment</strong></td><td>Old buildings pulled down and replaced with modern buildings; roads widened; community facilities and open space added</td><td>Kwun Tong Town Centre, To Kwa Wan, Sham Shui Po</td></tr>
+        <tr><td><strong>Regulate subdivided flats</strong></td><td>Minimum floor area requirements; fire safety standards; proper sanitation</td><td>Applies to all subdivided units</td></tr>
+        <tr><td><strong>Landlord registration scheme</strong></td><td>Register landlords to ensure compliance with housing standards</td><td>Improves accountability and living conditions</td></tr>
+        <tr><td><strong>Social support</strong></td><td>NGOs provide community services for subdivided flat residents</td><td>e.g. Caritas, Salvation Army</td></tr>
+      </tbody>
+    </table>
+
+    <h3>5.1.3 Redeveloping aged public housing</h3>
+    <p>Many old public housing estates are over 40 years old and need redevelopment.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Demolish and rebuild</strong></td><td>Aged estates are demolished and rebuilt at higher density, providing more units with modern facilities</td><td>Wah Fu Estate, Shek Kip Mei Estate, Ma Tau Wai Estate</td></tr>
+        <tr><td><strong>Interim rehousing</strong></td><td>Affected residents are offered new units or temporary housing during redevelopment</td><td>Relocation to nearby estates</td></tr>
+      </tbody>
+    </table>
+
+    <h3>5.1.4 Changing land uses</h3>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Rezoning agricultural land</strong></td><td>Change land use from agriculture to residential to free up land for housing</td><td>Several sites in the New Territories</td></tr>
+        <tr><td><strong>Developing brownfield sites</strong></td><td>Convert abandoned industrial or storage land into housing</td><td>Brownfield sites in Yuen Long, Fanling</td></tr>
+        <tr><td><strong>Converting industrial buildings</strong></td><td>Allow older industrial buildings to be converted into residential use</td><td>Pilot scheme for industrial buildings in older districts</td></tr>
+        <tr><td><strong>Land resumption</strong></td><td>Government resumes private land for public housing projects under the Land Resumption Ordinance</td><td>Various sites across Hong Kong</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 5.2 -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="5-2">5.2 How can we reduce traffic congestion?</h2>
+
+    <h3>Expanding the railway network</h3>
+    <p>The government plans to build more railway lines in the future.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Expand the railway network</strong></td><td>Build more railway lines to connect more districts and reduce reliance on roads (Tuen Ma Line, Shatin to Central Link)</td></tr>
+        <tr><td><strong>Bus route optimisation</strong></td><td>Adjust bus routes; introduce express routes; bus-bus interchanges</td></tr>
+        <tr><td><strong>Public transport interchanges</strong></td><td>Design stations where MTR, buses, minibuses connect seamlessly</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Controlling the number of cars</h3>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Raise first registration tax</strong></td><td>Increase tax on new car purchases to discourage people from buying cars</td></tr>
+        <tr><td><strong>Improve bus routes</strong></td><td>Better bus routes and services to encourage the use of public transport instead of private cars</td></tr>
+        <tr><td><strong>Park-and-ride discounts</strong></td><td>Buses and minibuses offer discounts for drivers who park at designated lots and take public transport into the city</td></tr>
+        <tr><td><strong>High parking fees / limited parking</strong></td><td>Expensive and scarce parking in urban areas discourages driving</td></tr>
+        <tr><td><strong>Electronic Road Pricing (ERP)</strong></td><td>Charge drivers for using congested roads at peak times — proposed but not yet implemented</td></tr>
+        <tr><td><strong>Tunnel tolls</strong></td><td>Toll charges for cross-harbour and mountain tunnels to manage demand</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Improving roads</h3>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Build new roads</strong></td><td>New roads are built to ease traffic flows in urban areas</td><td>Central-Wan Chai Bypass — commuting time from Eastern to Western reduced from 45 mins to less than 10 mins</td></tr>
+        <tr><td><strong>Improve existing roads</strong></td><td>Government improves the capacity and safety of existing roads</td><td>Widening Tuen Mun Road reduced traffic congestion and accidents</td></tr>
+      </tbody>
+    </table>
+
+    <div class="trap">
+      <strong>⚠️ MC trap:</strong> <em>"Building more roads is the best long-term solution to traffic congestion."</em>
+      → <strong>False</strong>. New roads attract more drivers (induced demand), so congestion often returns.
+      The city cannot build its way out of congestion — managing demand is essential.
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 5.3 -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="5-3">5.3 How can we ease pollution problems?</h2>
+
+    <h3>Air pollution</h3>
+    <p>The government has various measures to tackle air pollution:</p>
+
+    <h4 style="font-size:.92rem;margin:16px 0 6px;color:var(--primary);">Road traffic</h4>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Phase out diesel cars</strong></td><td>Ban new diesel private cars; discourage existing diesel vehicles through higher taxes</td></tr>
+        <tr><td><strong>Subsidise electric buses</strong></td><td>Government subsidises bus companies to replace diesel buses with electric buses</td></tr>
+        <tr><td><strong>Lower first registration tax for electric cars</strong></td><td>Reduce tax to encourage the switch from petrol/diesel to electric vehicles</td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-size:.92rem;margin:16px 0 6px;color:var(--primary);">Power supply</h4>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Use less coal</strong></td><td>Reduce reliance on coal-fired power plants</td></tr>
+        <tr><td><strong>Use more natural gas and non-fossil fuels</strong></td><td>Switch to cleaner-burning natural gas; increase nuclear power imported from Mainland</td></tr>
+        <tr><td><strong>Develop renewable energy</strong></td><td>Solar energy and wind power projects (e.g. solar farms, offshore wind farms)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Land pollution (solid waste)</h3>
+    <p>The government encourages people to reduce and recycle waste at source.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Solid Waste Charging Scheme</strong></td><td>The more waste we produce, the more we have to pay — follows the polluter-pays principle</td></tr>
+        <tr><td><strong>Waste reduction and recycling</strong></td><td>Reduce packaging; avoid single-use plastics; food waste recycling; more recycling bins and education</td></tr>
+        <tr><td><strong>Expand landfills</strong></td><td>Extend the capacity of the three existing landfills</td></tr>
+        <tr><td><strong>Build an incinerator at Shek Kwu Chau</strong></td><td>Burn waste to reduce volume — new incinerator planned to handle non-recyclable waste</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Noise pollution</h3>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Pass laws to limit noise in public places</strong></td><td>Legal controls on noise from businesses, street performances, and public activities</td></tr>
+        <tr><td><strong>Low-noise piling equipment</strong></td><td>Use quieter piling machines on construction sites; regulate the time allowed for piling</td></tr>
+        <tr><td><strong>Noise barriers and green belts</strong></td><td>Build barriers and plant green belts between busy roads and residential areas</td></tr>
+        <tr><td><strong>Building design</strong></td><td>Double-glazed windows; acoustic insulation in new residential buildings</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Water pollution</h3>
+    <p>The government has built sewers and sewage treatment plants to cope with water pollution.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Build sewers and sewage treatment plants</strong></td><td>Government constructs and upgrades sewers and treatment facilities across the city</td></tr>
+        <tr><td><strong>Harbour Area Treatment Scheme (HATS)</strong></td><td>One of the major projects — centralised sewage treatment at Stonecutters Island with chemically enhanced primary treatment</td></tr>
+        <tr><td><strong>Sewage charges</strong></td><td>Charges imposed on households and businesses to encourage people to use less water</td></tr>
+        <tr><td><strong>Livestock waste control</strong></td><td>Regulations on farming waste discharge; centralised treatment facilities</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Light pollution</h3>
+    <p>There are no laws regulating light pollution in Hong Kong. Instead, the government relies on voluntary measures.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Charter on External Lighting</strong></td><td>Some businesses support the charter by switching off decorative lights at night — a voluntary scheme, not legally binding</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 5.4 -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="5-4">5.4 How can we manage urban decay?</h2>
+
+    <h3>Redevelopment by URA</h3>
+    <p>Old buildings are pulled down and replaced with modern buildings. Roads are widened, and more community facilities and open space are provided.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>URA redevelopment projects</strong></td><td>URA acquires old buildings, demolishes them, and rebuilds with proper planning; includes widening roads and adding community facilities and open space</td><td>Kwun Tong Town Centre, To Kwa Wan, Sham Shui Po</td></tr>
+        <tr><td><strong>Compulsory sale</strong></td><td>Under the Land (Compulsory Sale for Redevelopment) Ordinance, apply to force sale if 80–90% owner consent is reached</td><td>Speeds up redevelopment when a few owners block progress</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Building rehabilitation</h3>
+    <p>Maintenance works are carried out to slow down the aging of buildings and urban decay. Building facilities are also upgraded to meet modern safety standards.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Building Safety Loan Scheme</strong></td><td>Low-interest loans for owners to repair and maintain buildings</td></tr>
+        <tr><td><strong>Operating Fund for Owners' Corporations</strong></td><td>Financial support to help owners set up and run an owners' corporation</td></tr>
+        <tr><td><strong>Building Safety Improvement Scheme</strong></td><td>Subsidies for safety-related repairs (fire safety, structural repairs)</td></tr>
+        <tr><td><strong>Minor works / beautification</strong></td><td>Facade improvements, street-level upgrades, landscaping in old districts</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Heritage and neighbourhood preservation</h3>
+    <p>Buildings with historical and cultural value are protected and restored for new uses.</p>
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>How it works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Adaptive reuse</strong></td><td>Preserve tong lau and historic buildings by converting to new uses (e.g. PMQ, Tai Kwun, Blue House)</td></tr>
+        <tr><td><strong>District revitalisation</strong></td><td>Improve streetscape, signage, and public spaces without total demolition</td></tr>
+      </tbody>
+    </table>
+
+    <h3>The URA's four-pronged approach</h3>
+    <div class="flow">
+      <span class="flow-step">Redevelopment</span>
+      <span class="flow-arrow">+</span>
+      <span class="flow-step">Rehabilitation</span>
+      <span class="flow-arrow">+</span>
+      <span class="flow-step">Heritage preservation</span>
+      <span class="flow-arrow">+</span>
+      <span class="flow-step">Revitalisation</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Holistic urban renewal</span>
+    </div>
+
+    <div class="trap">
+      <strong>⚠️ MC trap:</strong> <em>"The URA is only responsible for redevelopment."</em>
+      → <strong>False.</strong> The URA takes a four-pronged approach: redevelopment, rehabilitation, heritage preservation, and revitalisation.
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- KEY TERMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="key-terms">Key terms — quick revision cards</h2>
+    <div class="terms-grid">
+      <div class="term-card">
+        <div class="term">URA</div>
+        <div class="def">Urban Renewal Authority — manages urban decay via redevelopment, rehabilitation, heritage preservation, revitalisation</div>
+      </div>
+      <div class="term-card">
+        <div class="term">HOS</div>
+        <div class="def">Home Ownership Scheme — subsidised flats sold below market price to lower-income families</div>
+      </div>
+      <div class="term-card">
+        <div class="term">GSH</div>
+        <div class="def">Green Form Subsidised Home Ownership Scheme — for PRH tenants and applicants</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Transitional housing</div>
+        <div class="def">Short-term housing on vacant land while waiting for permanent public housing</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Light public housing</div>
+        <div class="def">Quick-to-build prefabricated public housing units (launched 2023)</div>
+      </div>
+      <div class="term-card">
+        <div class="term">ERP</div>
+        <div class="def">Electronic Road Pricing — charging drivers for using congested roads at peak times</div>
+      </div>
+      <div class="term-card">
+        <div class="term">HATS</div>
+        <div class="def">Harbour Area Treatment Scheme — centralised sewage treatment for Victoria Harbour</div>
+      </div>
+      <div class="term-card">
+        <div class="term">T·Park</div>
+        <div class="def">Waste-to-energy facility; reduces landfill volume by 90%</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Induced demand</div>
+        <div class="def">Building more roads → more drivers → congestion returns</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Compulsory sale</div>
+        <div class="def">Legal mechanism for redevelopment when 80–90% owner consent is reached</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Adaptive reuse</div>
+        <div class="def">Converting old buildings to new purposes while preserving heritage value</div>
+      </div>
+      <div class="term-card">
+        <div class="term">EPR</div>
+        <div class="def">Extended Producer Responsibility — producers pay for end-of-life collection and recycling</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PRACTICE QUESTIONS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="questions">Exam-style practice questions</h2>
+
+    <h3>Section A — Multiple Choice (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q1</div>
+      <div class="q-text">Which of the following is a solution to traffic congestion that manages <strong>demand</strong> rather than increasing supply?</div>
+      <div class="mc-options">
+        A. <span class="correct">Electronic Road Pricing</span><br>
+        B. Building a new tunnel<br>
+        C. Widening existing roads<br>
+        D. Adding more lanes to a highway
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q2</div>
+      <div class="q-text">The URA's approach to urban decay includes all of the following <strong>except</strong>:</div>
+      <div class="mc-options">
+        A. Redevelopment<br>
+        B. Rehabilitation<br>
+        C. <span class="correct">Relocation</span><br>
+        D. Revitalisation
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q3</div>
+      <div class="q-text">Harbour Area Treatment Scheme (HATS) is a solution to which pollution problem?</div>
+      <div class="mc-options">
+        A. Air pollution<br>
+        B. <span class="correct">Water pollution</span><br>
+        C. Land pollution<br>
+        D. Noise pollution
+      </div>
+    </div>
+
+    <h3>Section B — True or False (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q4</div>
+      <div class="q-text">"Building more roads is an effective long-term solution to traffic congestion."</div>
+      <div class="answer"><strong>False</strong> — induced demand means new roads fill up quickly.</div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q5</div>
+      <div class="q-text">"T·Park is a waste-to-energy facility that reduces the volume of waste sent to landfills."</div>
+      <div class="answer"><strong>True</strong> — T·Park incinerates waste and generates electricity, reducing landfill volume by ~90%.</div>
+    </div>
+
+    <h3>Section C — Structured Question (6 marks)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q6 — Refer to the case study of Kwun Tong Town Centre redevelopment</div>
+      <div class="q-text">
+        <p><strong>(a)</strong> Describe <strong>two</strong> housing problems in Hong Kong that the government needs to tackle. (2 marks)</p>
+        <p><strong>(b)</strong> Explain <strong>one</strong> solution to traffic congestion and <strong>one</strong> solution to air pollution in Hong Kong. (4 marks)</p>
+      </div>
+      <div class="answer">
+        <strong>Suggested structure:</strong><br>
+        Name the solution → Explain how it works → Give a specific Hong Kong example<br>
+        e.g. "Electronic Road Pricing (ERP) charges drivers for using congested roads during peak hours, which reduces traffic during busy times and encourages public transport use. It has been proposed for Central and Wan Chai."
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CHECKLIST -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="checklist">✅ Revision checklist</h2>
+    <p style="font-size:.88rem; color:#555; margin-bottom:10px;">Tick each box as you revise:</p>
+    <ul class="checklist">
+      <li>I can explain how the government tackles housing shortage (public housing, land supply, transitional housing)</li>
+      <li>I can describe how the government addresses poor living environment in subdivided flats (regulation, redevelopment)</li>
+      <li>I can list 3 ways to reduce traffic congestion (public transport, car restraint, traffic management)</li>
+      <li>I understand why building more roads is not a long-term solution (induced demand)</li>
+      <li>I can describe at least one solution for each of the 5 pollution types (air, land, water, noise, light)</li>
+      <li>I can explain the four-pronged approach of the URA</li>
+      <li>I know what HATS, T·Park, ERP, HOS, and GSH stand for</li>
+      <li>I can link solutions in Unit 5 to the corresponding problems in Unit 4</li>
+      <li>I understand the difference between redevelopment and rehabilitation</li>
+    </ul>
+  </div>
+
+  <div style="text-align:center; padding:20px 0 10px; font-size:.8rem; color:var(--text-muted);">
+    S1 Geography &middot; Final Exam Revision &middot; 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>

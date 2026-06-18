@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 6 – Sustainable City | Study Guide</title>
+<style>
+  :root {
+    --primary: #1a6b4a;
+    --primary-light: #d4efdf;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--primary-light);
+  }
+
+  .page-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a6b4a 0%, #2ecc71 100%);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin-top: 6px;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-top: 12px;
+  }
+
+  .exam-tip {
+    background: #fef9e7;
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .exam-tip strong {
+    color: #b7950b;
+  }
+
+  .teacher-note {
+    background: #eafaf1;
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .teacher-note strong {
+    color: #1e8449;
+  }
+
+  .trap {
+    background: #fdedec;
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .trap strong {
+    color: #c0392b;
+  }
+
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a6b4a;
+    margin: 20px 0 10px;
+  }
+
+  .section h4 {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 14px 0 6px;
+  }
+
+  .section p, .section li {
+    font-size: .94rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: .9rem;
+  }
+
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--primary-light);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+  }
+
+  tr:nth-child(even) td {
+    background: #f7f9fc;
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .term-card {
+    background: #f4f6f8;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+
+  .term-card .term {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .9rem;
+  }
+
+  .term-card .def {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: .9rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 2px;
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+
+  .q-box {
+    background: #f4f9ff;
+    border: 1px solid #d4efdf;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .q-box .q-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+  }
+
+  .q-box .q-text {
+    font-size: .92rem;
+  }
+
+  .q-box .answer {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #ccc;
+  }
+
+  .mc-options {
+    margin: 6px 0 0 18px;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  .mc-options .correct {
+    font-weight: 700;
+    background: #d5f5e3;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    margin: 14px 0;
+    font-size: .88rem;
+    background: #f7f9fc;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  .flow-step {
+    background: var(--primary-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  .flow-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+  }
+
+  .sub-list {
+    margin: 8px 0 8px 20px;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .sub-list strong {
+    color: var(--primary);
+  }
+
+  .subpage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 18px 0;
+  }
+
+  .subpage-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow .15s, transform .15s;
+  }
+
+  .subpage-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transform: translateY(-2px);
+  }
+
+  .subpage-card h3 {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    color: var(--primary);
+  }
+
+  .subpage-card p {
+    font-size: .88rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 24px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .section { padding: 20px 18px; }
+    .terms-grid { grid-template-columns: 1fr; }
+    .subpage-grid { grid-template-columns: 1fr; }
+    table { font-size: .82rem; }
+    th, td { padding: 7px 8px; }
+    .flow { flex-direction: column; align-items: flex-start; }
+    .flow-arrow { display: none; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .section { break-inside: avoid; border: 1px solid #ccc; }
+    .hero { background: #1a6b4a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .exam-tip, .teacher-note, .trap { break-inside: avoid; }
+    th { background: #d4efdf !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tr:nth-child(even) td { background: #f7f9fc !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .q-box { break-inside: avoid; }
+    .term-card { break-inside: avoid; }
+    .subpage-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="../index.html" class="back-link">← Back to exam hub</a>
+
+  <div class="hero">
+    <h1>Unit 6 – Sustainable City</h1>
+    <div class="sub">S1 Geography Final Revision · Hong Kong Curriculum</div>
+    <div class="badge">Appears in Section A · C</div>
+  </div>
+
+  <div class="exam-tip">
+    <strong>📌 Exam tip:</strong> Unit 6 is the shortest unit but links back to Units 4 and 5. Expect MC on definitions (sustainable development, 3 pillars) and a structured question asking you to suggest how Hong Kong can become more sustainable. Link your answers to specific problems from Unit 4 and solutions from Unit 5.
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SUB-PAGE NAV -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Unit sections</h2>
+    <div class="subpage-grid">
+      <a href="6-1.html" class="subpage-card">
+        <h3>6.1 Sustainable Development &amp; Sustainable City</h3>
+        <p>Definition of sustainable development, three pillars, characteristics of a sustainable city</p>
+      </a>
+      <a href="6-2.html" class="subpage-card">
+        <h3>6.2 Making Hong Kong a Sustainable City</h3>
+        <p>Innovation and technology, people-oriented planning</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- KEY TERMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Key terms — quick revision cards</h2>
+    <div class="terms-grid">
+      <div class="term-card">
+        <div class="term">Sustainable development</div>
+        <div class="def">Development that meets present needs without compromising future generations (Brundtland, 1987)</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Three pillars</div>
+        <div class="def">Social, environmental, and economic sustainability; all three must be balanced</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Sustainable city</div>
+        <div class="def">A city designed to minimise environmental impact while providing high quality of life</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Smart city</div>
+        <div class="def">A city using technology and data to improve efficiency, sustainability, and quality of life</div>
+      </div>
+      <div class="term-card">
+        <div class="term">People-oriented planning</div>
+        <div class="def">Urban planning that focuses on citizens' needs — medical care, education, infrastructure, recreation, and jobs — to create a livable city</div>
+      </div>
+      <div class="term-card">
+        <div class="term">15-minute neighbourhood</div>
+        <div class="def">A neighbourhood where daily needs can be met within a 15-minute walk</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Universal design</div>
+        <div class="def">Design that is accessible and usable by everyone regardless of age or ability</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Smart mobility</div>
+        <div class="def">Using technology to improve transport efficiency (e.g. real-time traffic apps)</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Brundtland Report</div>
+        <div class="def">1987 UN report "Our Common Future" that defined sustainable development</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Green building</div>
+        <div class="def">Buildings designed with energy efficiency, sustainable materials, and minimal environmental impact</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PRACTICE QUESTIONS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Exam-style practice questions</h2>
+
+    <h3>Section A — Multiple Choice (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q1</div>
+      <div class="q-text">Which of the following is <strong>NOT</strong> one of the three pillars of sustainable development?</div>
+      <div class="mc-options">
+        A. Social sustainability<br>
+        B. Environmental sustainability<br>
+        C. <span class="correct">Political sustainability</span><br>
+        D. Economic sustainability
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q2</div>
+      <div class="q-text">The Brundtland Report defined sustainable development in which year?</div>
+      <div class="mc-options">
+        A. 1972<br>
+        B. <span class="correct">1987</span><br>
+        C. 1992<br>
+        D. 2000
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q3</div>
+      <div class="q-text">Which of the following is an example of people-oriented planning?</div>
+      <div class="mc-options">
+        A. Building more highways<br>
+        B. <span class="correct">Creating walkable neighbourhoods with universal design</span><br>
+        C. Increasing building height limits<br>
+        D. Privatising public parks
+      </div>
+    </div>
+
+    <h3>Section B — True or False (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q4</div>
+      <div class="q-text">"Sustainable development only focuses on environmental protection."</div>
+      <div class="answer"><strong>False</strong> — it balances social, environmental, and economic needs.</div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q5</div>
+      <div class="q-text">"A smart city uses technology to improve efficiency and quality of life."</div>
+      <div class="answer"><strong>True</strong> — smart cities use data and technology for better urban management.</div>
+    </div>
+
+    <h3>Section C — Structured Question (6 marks)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q6</div>
+      <div class="q-text">
+        <p><strong>(a)</strong> Define the term "sustainable development". (2 marks)</p>
+        <p><strong>(b)</strong> Suggest two ways Hong Kong can become a more sustainable city. (4 marks)</p>
+      </div>
+      <div class="answer">
+        <strong>Suggested structure:</strong><br>
+        (a) "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs."<br>
+        (b) Name the measure → Explain how it works → Give a HK example.<br>
+        e.g. "Promoting innovation and technology across three areas — economy (e.g. subsidies for low-emission transport and green building designs), environment (e.g. waste-to-energy technology and smart waste management), and society (e.g. traffic sensors for real-time data and mobile apps for government services)."
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CHECKLIST -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>✅ Revision checklist</h2>
+    <p style="font-size:.88rem; color:#555; margin-bottom:10px;">Tick each box as you revise:</p>
+    <ul class="checklist">
+      <li>I can define sustainable development and name the three pillars</li>
+      <li>I can list characteristics of a sustainable city</li>
+      <li>I can explain how innovation and technology make HK more sustainable across three groups: economy, environment, and society</li>
+      <li>I can explain what people-oriented planning means (addressing needs for medical care, education, infrastructure including carbon reduction and internet services, recreation including cycling tracks and cultural facilities, and jobs)</li>
+      <li>I know the year of the Brundtland Report (1987)</li>
+      <li>I can link Unit 6 ideas back to urban problems in Unit 4 and solutions in Unit 5</li>
+      <li>I can give specific HK examples of smart city initiatives</li>
+    </ul>
+  </div>
+
+  <div style="text-align:center; padding:20px 0 10px; font-size:.8rem; color:var(--text-muted);">
+    S1 Geography · Final Exam Revision · 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>

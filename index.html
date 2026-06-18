@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S1 Geography — Final Exam Revision</title>
+<style>
+  :root {
+    --primary: #1a5276;
+    --primary-light: #d4e6f1;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #2e86c1 100%);
+    color: #fff;
+    padding: 48px 36px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1.1rem;
+    opacity: .85;
+    margin-top: 4px;
+  }
+
+  .countdown {
+    display: inline-block;
+    background: rgba(255,255,255,.15);
+    padding: 10px 24px;
+    border-radius: 30px;
+    margin-top: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .countdown span {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary);
+    padding: 0 8px;
+    border-radius: 4px;
+    margin: 0 2px;
+    font-size: 1.2rem;
+  }
+
+  /* EXAM INFO BANNER */
+  .exam-info {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .exam-info .item {
+    font-size: .9rem;
+  }
+
+  .exam-info .item strong {
+    display: block;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .exam-info .item .value {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* SECTION HEADER */
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  /* UNIT CARDS */
+  .unit-grid {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .unit-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all .15s;
+  }
+
+  .unit-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 12px rgba(26,82,118,.12);
+  }
+
+  .unit-card .num {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .unit-card:nth-child(1) .num { background: #e74c3c; }
+  .unit-card:nth-child(2) .num { background: #27ae60; }
+  .unit-card:nth-child(3) .num { background: #2e86c1; }
+
+  .unit-card .info h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .unit-card .info p {
+    font-size: .85rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .unit-card .status {
+    margin-left: auto;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status.ready { background: #d5f5e3; color: #1e8449; }
+  .status.pending { background: #fef9e7; color: #b7950b; }
+
+  .unit-card.disabled {
+    opacity: .55;
+    cursor: default;
+  }
+
+  .unit-card.disabled:hover {
+    border-color: var(--border);
+    box-shadow: none;
+  }
+
+  /* TABLE */
+  .exam-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px;
+    font-size: .9rem;
+  }
+
+  .exam-table th, .exam-table td {
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    text-align: left;
+  }
+
+  .exam-table th {
+    background: var(--primary-light);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: .82rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+  }
+
+  .exam-table tr:nth-child(even) td {
+    background: #f7f9fc;
+  }
+
+  .exam-table .bonus {
+    color: var(--accent-amber);
+    font-weight: 600;
+  }
+
+  /* EQUIPMENT BADGES */
+  .equipment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 24px;
+  }
+
+  .equipment .badge {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: 500;
+  }
+
+  /* SCOPE */
+  .scope-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 24px;
+  }
+
+  .scope-list li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    font-size: .9rem;
+  }
+
+  .scope-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 2px;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 20px 0 10px;
+    font-size: .8rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 32px 20px 28px; }
+    .hero h1 { font-size: 1.6rem; }
+    .countdown { font-size: .85rem; padding: 8px 16px; }
+    .unit-card { flex-wrap: wrap; gap: 12px; }
+    .unit-card .status { margin-left: 0; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .hero { background: #1a5276 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .unit-card { break-inside: avoid; border: 1px solid #ccc; }
+    .unit-card.disabled { display: none; }
+    .exam-table th { background: #d4e6f1 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>S1 Geography</h1>
+    <div class="sub">Final Exam Revision</div>
+    <div class="countdown">
+      📅 23 June 2026 &middot; 8:30–9:30 a.m. &middot; 60 min
+    </div>
+  </div>
+
+  <!-- EXAM INFO -->
+  <div class="exam-info">
+    <div class="item">
+      <strong>Paper</strong>
+      <span class="value">Sections A–D</span>
+    </div>
+    <div class="item">
+      <strong>Total marks</strong>
+      <span class="value">70 + 8 bonus</span>
+    </div>
+    <div class="item">
+      <strong>Core units</strong>
+      <span class="value">4 · 5 · 6</span>
+    </div>
+    <div class="item">
+      <strong>Tourism (E7)</strong>
+      <span class="value">Units 1–2</span>
+    </div>
+  </div>
+
+  <!-- UNITS -->
+  <div class="section-title">📖 Study units</div>
+
+  <div class="unit-grid">
+    <a href="unit4/" class="unit-card">
+      <div class="num">4</div>
+      <div class="info">
+        <h3>Urban Problems</h3>
+        <p>Housing shortage &middot; Poor living environment &middot; Traffic congestion &middot; Environmental pollution &middot; Urban decay</p>
+      </div>
+      <span class="status ready">✅ Ready</span>
+    </a>
+
+    <a href="unit5/" class="unit-card">
+      <div class="num">5</div>
+      <div class="info">
+        <h3>Solutions to Urban Problems</h3>
+        <p>Tackling housing &middot; Reducing traffic &middot; Easing pollution &middot; Managing urban decay</p>
+      </div>
+      <span class="status ready">✅ Ready</span>
+    </a>
+
+    <a href="unit6/" class="unit-card">
+      <div class="num">6</div>
+      <div class="info">
+        <h3>Sustainable City</h3>
+        <p>Sustainable development &middot; Hong Kong as a sustainable city &middot; Building an ideal city</p>
+      </div>
+      <span class="status ready">✅ Ready</span>
+    </a>
+  </div>
+
+  <!-- EXAM STRUCTURE -->
+  <div class="section-title">📋 Exam structure</div>
+
+  <table class="exam-table">
+    <thead>
+      <tr><th>Section</th><th>Type</th><th>Marks</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>A</td><td>Multiple-Choice Questions</td><td>20</td></tr>
+      <tr><td>B</td><td>True or False</td><td>10</td></tr>
+      <tr><td>C</td><td>Data/Skill-based Structured Questions<br><span style="font-size:.82rem;color:#555">C1 Urban Studies (Units 4–6) + E7 Tourism (Units 1–2)</span></td><td>40</td></tr>
+      <tr><td>D <span class="bonus">(optional)</span></td><td>Challenging Question (bonus)</td><td><span class="bonus">+8</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- EXAM SCOPE -->
+  <div class="section-title">📌 Exam scope</div>
+
+  <ul class="scope-list">
+    <li><strong>C1 Using Urban Space Wisely</strong> — Textbook Units 4, 5, 6</li>
+    <li><strong>Map reading skills</strong> — Longitude and latitude, grid square and reference, directions, scales, measuring distance (Textbook pp.70–79)</li>
+    <li><strong>E7 Tourism</strong> — Textbook Units 1 and 2</li>
+  </ul>
+
+  <!-- EQUIPMENT -->
+  <div class="section-title">✏️ Required equipment</div>
+
+  <div class="equipment">
+    <span class="badge">✏️ Pencil</span>
+    <span class="badge">🧹 Eraser</span>
+    <span class="badge">📏 Ruler</span>
+    <span class="badge">📐 Protractor</span>
+  </div>
+
+  <div class="footer">
+    S1 Geography &middot; Final Exam Revision &middot; 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>

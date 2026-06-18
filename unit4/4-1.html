@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.1 Major Urban Problems | Unit 4 Study Guide</title>
+<style>
+  :root {
+    --primary: #1a5276;
+    --primary-light: #d4e6f1;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--primary-light);
+  }
+
+  .page-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #2e86c1 100%);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin-top: 6px;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-top: 12px;
+  }
+
+  .exam-tip {
+    background: #fef9e7;
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .exam-tip strong {
+    color: #b7950b;
+  }
+
+  .teacher-note {
+    background: #eafaf1;
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .teacher-note strong {
+    color: #1e8449;
+  }
+
+  .trap {
+    background: #fdedec;
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .trap strong {
+    color: #c0392b;
+  }
+
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a5276;
+    margin: 20px 0 10px;
+  }
+
+  .section h4 {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 14px 0 6px;
+  }
+
+  .section p, .section li {
+    font-size: .94rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: .9rem;
+  }
+
+  th, td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--primary-light);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+  }
+
+  tr:nth-child(even) td {
+    background: #f7f9fc;
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .term-card {
+    background: #f4f6f8;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+
+  .term-card .term {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .9rem;
+  }
+
+  .term-card .def {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: .9rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .checklist li::before {
+    content: "\2610";
+    position: absolute;
+    left: 2px;
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+
+  .q-box {
+    background: #f4f9ff;
+    border: 1px solid #d4e6f1;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .q-box .q-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+  }
+
+  .q-box .q-text {
+    font-size: .92rem;
+  }
+
+  .q-box .answer {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #ccc;
+  }
+
+  .mc-options {
+    margin: 6px 0 0 18px;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  .mc-options .correct {
+    font-weight: 700;
+    background: #d5f5e3;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    margin: 14px 0;
+    font-size: .88rem;
+    background: #f7f9fc;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  .flow-step {
+    background: var(--primary-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  .flow-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+  }
+
+  .sub-list {
+    margin: 8px 0 8px 20px;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .sub-list strong {
+    color: var(--primary);
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 24px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .section { padding: 20px 18px; }
+    .terms-grid { grid-template-columns: 1fr; }
+    table { font-size: .82rem; }
+    th, td { padding: 7px 8px; }
+    .flow { flex-direction: column; align-items: flex-start; }
+    .flow-arrow { display: none; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .section { break-inside: avoid; border: 1px solid #ccc; }
+    .hero { background: #1a5276 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .exam-tip, .teacher-note, .trap { break-inside: avoid; }
+    th { background: #d4e6f1 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tr:nth-child(even) td { background: #f7f9fc !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .q-box { break-inside: avoid; }
+    .term-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="back-link">&larr; Back to Unit 4 hub</a>
+
+  <nav class="page-nav">
+    <a href="4-1.html">4.1</a>
+    <a href="4-2.html">4.2</a>
+    <a href="4-3.html">4.3</a>
+  </nav>
+
+  <div class="hero">
+    <h1>4.1 &mdash; Major Urban Problems</h1>
+    <div class="sub">S1 Geography Final Revision &middot; Hong Kong Curriculum</div>
+    <div class="badge">Appears in Section A &bull; B &bull; C</div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- 4.1 Content -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>4.1 What are the major urban problems in Hong Kong?</h2>
+
+    <table>
+      <thead>
+        <tr><th>Problem</th><th>Key symptoms</th><th>Exam tip</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2"><strong>Housing problems</strong></td>
+          <td><strong>(a) Housing shortage</strong> &mdash; public-housing waiting time 5.5 yr (2020); &gt;210,000 people live in subdivided flats; tenants spend 40% of income on rent; subdivided flats have the highest per-ft&sup2; rent; floor area per capita only 57 ft&sup2; &mdash; smaller than a prison cell; private housing too expensive for many; public housing rents lower but supply insufficient</td>
+          <td rowspan="2">MC: <em>"Which is NOT a housing problem?"</em> &mdash; watch for distractors<br><br>Structured Q may show a photo of a subdivided flat &mdash; describe the living conditions</td>
+        </tr>
+        <tr>
+          <td><strong>(b) Poor living environment</strong> &mdash; overcrowded subdivided flats (entire families in one room); hygiene problems (shared toilets, poor rubbish disposal, pests); safety problems (fire hazards, exposed wiring, risk of collapse)</td>
+        </tr>
+        <tr>
+          <td><strong>Traffic congestion</strong></td>
+          <td>Peak-hour jams at Cross-Harbour Tunnel, Tsuen Wan Rd, Nathan Rd; vehicle growth outpaces road growth; MTR platforms crowded with passengers during peak hours</td>
+          <td>T/F favourite: <em>"Building more roads always solves congestion"</em> &rarr; <strong>False</strong> (induced demand)</td>
+        </tr>
+        <tr>
+          <td><strong>Environmental pollution</strong></td>
+          <td>
+            <strong>a. Air pollution</strong> &mdash; cars and power plants are the major sources; roadside pollution severe in commercial areas with heavy traffic (e.g. Causeway Bay); high pollutant levels cause respiratory and cardiovascular health problems<br>
+            <strong>b. Land pollution</strong> &mdash; solid waste is the largest source; &gt;10,000 tonnes sent to landfills daily, mostly food waste; landfill leachate pollutes soil and groundwater; 3 landfills nearing capacity; low recycling rate (~30%)<br>
+            <strong>c. Water pollution</strong> &mdash; 3 million m&sup3; of sewage daily, mainly from domestic, commercial, and farming activities; water quality only met 80% of Water Quality Objectives<br>
+            <strong>d. Noise pollution</strong> &mdash; residential buildings close to roads and busy commercial areas suffer from traffic, road maintenance, and business activity noise; affects mental health and quality of life<br>
+            <strong>e. Light pollution</strong> &mdash; in Yau Tsim Mong district, bright billboard lights waste energy and affect residents' daily lives
+          </td>
+          <td>Structured Q may ask: <em>"Suggest two types of pollution in Hong Kong and their causes."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Urban decay</strong></td>
+          <td>Ageing buildings, poor sanitation, safety hazards in old districts</td>
+          <td>See 4.2 &mdash; the most detailed sub-topic</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="teacher-note">
+      <strong>&#128104;&#8205;&#127979; Teacher's note &mdash; Why housing problems are so severe:</strong>
+      Three root causes interact: <strong>(1)</strong> limited land &mdash; only ~24% developed,
+      40% protected as country parks; <strong>(2)</strong> high population density &mdash; 7.5+ million people;
+      <strong>(3)</strong> government land supply system &mdash; land auctions keep prices high.
+      Memorise all three for 3-mark "explain" questions.
+    </div>
+  </div>
+
+  <div style="text-align:center; padding:20px 0 10px; font-size:.8rem; color:var(--text-muted);">
+    S1 Geography &middot; Final Exam Revision &middot; 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>
