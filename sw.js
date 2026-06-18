@@ -1,10 +1,18 @@
-const CACHE = 's1-geo-v3';
+const CACHE = 's1-geo-v4';
 const URLS = [
   '.',
   'index.html',
   'index.md',
   'manifest.json',
   'icon.svg',
+  'unit1/',
+  'unit1/index.html',
+  'unit1/1-1.html',
+  'unit1/1-2.html',
+  'unit2/',
+  'unit2/index.html',
+  'unit2/2-1.html',
+  'unit2/2-2.html',
   'unit4/',
   'unit4/index.html',
   'unit4/4-1.html',
@@ -19,11 +27,7 @@ const URLS = [
   'unit6/',
   'unit6/index.html',
   'unit6/6-1.html',
-  'unit6/6-2.html',
-  'unit2/',
-  'unit2/index.html',
-  'unit2/2-1.html',
-  'unit2/2-2.html'
+  'unit6/6-2.html'
 ];
 
 self.addEventListener('install', e => {

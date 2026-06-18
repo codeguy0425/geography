@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 – Why Do People Travel? | Study Guide</title>
+<style>
+  :root {
+    --primary: #6c3483;
+    --primary-light: #e8daef;
+    --accent: #e74c3c;
+    --accent-green: #27ae60;
+    --accent-amber: #f39c12;
+    --bg: #fafbfc;
+    --card-bg: #fff;
+    --border: #dce1e8;
+    --text: #2c3e50;
+    --text-muted: #7f8c8d;
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--primary-light);
+  }
+
+  .page-nav a:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #6c3483 0%, #a569bd 100%);
+    color: #fff;
+    padding: 40px 36px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .sub {
+    font-size: 1rem;
+    opacity: .85;
+    margin-top: 6px;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-top: 12px;
+  }
+
+  .exam-tip {
+    background: #fef9e7;
+    border-left: 4px solid var(--accent-amber);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .exam-tip strong {
+    color: #b7950b;
+  }
+
+  .teacher-note {
+    background: #eafaf1;
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .teacher-note strong {
+    color: #1e8449;
+  }
+
+  .trap {
+    background: #fdedec;
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 20px 0;
+    font-size: .92rem;
+  }
+
+  .trap strong {
+    color: #c0392b;
+  }
+
+  .section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #6c3483;
+    margin: 20px 0 10px;
+  }
+
+  .section h4 {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 14px 0 6px;
+  }
+
+  .section p, .section li {
+    font-size: .94rem;
+  }
+
+  .section ul {
+    margin: 8px 0 8px 20px;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .section ul strong {
+    color: var(--primary);
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .term-card {
+    background: #f4f6f8;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+
+  .term-card .term {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .9rem;
+  }
+
+  .term-card .def {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: .9rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 2px;
+    color: var(--primary);
+    font-size: 1.1rem;
+  }
+
+  .q-box {
+    background: #f4f9ff;
+    border: 1px solid #d4e6f1;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .q-box .q-label {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+  }
+
+  .q-box .q-text {
+    font-size: .92rem;
+  }
+
+  .q-box .answer {
+    font-size: .85rem;
+    color: #555;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #ccc;
+  }
+
+  .mc-options {
+    margin: 6px 0 0 18px;
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  .mc-options .correct {
+    font-weight: 700;
+    background: #d5f5e3;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    margin: 14px 0;
+    font-size: .88rem;
+    background: #f7f9fc;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  .flow-step {
+    background: var(--primary-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  .flow-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+  }
+
+  .subpage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .subpage-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    transition: box-shadow .15s, transform .15s;
+  }
+
+  .subpage-card:hover {
+    box-shadow: 0 3px 12px rgba(108,52,131,.12);
+    transform: translateY(-2px);
+  }
+
+  .subpage-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  .subpage-card p {
+    font-size: .85rem;
+    color: #555;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 24px 20px; }
+    .hero h1 { font-size: 1.5rem; }
+    .section { padding: 20px 18px; }
+    .terms-grid { grid-template-columns: 1fr; }
+    .subpage-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .section { break-inside: avoid; border: 1px solid #ccc; }
+    .hero { background: #6c3483 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .exam-tip, .teacher-note, .trap { break-inside: avoid; }
+    .q-box { break-inside: avoid; }
+    .term-card { break-inside: avoid; }
+    .subpage-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="../index.html" class="back-link">← Back to exam hub</a>
+
+  <nav class="page-nav">
+    <a href="#key-terms">Key terms</a>
+    <a href="#questions">Questions</a>
+    <a href="#checklist">Checklist</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Unit 1 – Why Do People Travel to Other Places?</h1>
+    <div class="sub">E7 Tourism · S1 Geography Final Revision</div>
+    <div class="badge">Appears in Section C</div>
+  </div>
+
+  <div class="exam-tip">
+    <strong>📌 Exam tip:</strong> Unit 1 appears in Section C alongside Unit 2. Expect structured questions on why people travel and what enables HK people to travel. Know specific examples — budget airlines, high-speed rail, HK-Zh-Macao Bridge, and one-stop travel services.
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SUB-PAGE NAVIGATION -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2>Units in this topic</h2>
+    <div class="subpage-grid">
+      <a href="1-1.html" class="subpage-card">
+        <h3>1.1 Recreation &amp; 1.2 HK Travel Characteristics</h3>
+        <p>Definition and importance of recreation; characteristics of HK people travelling abroad</p>
+      </a>
+      <a href="1-2.html" class="subpage-card">
+        <h3>1.3 Reasons for Travel &amp; 1.4 Enabling Factors</h3>
+        <p>Why people travel; what makes it possible for HK people to travel</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- KEY TERMS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="key-terms">Key terms — quick revision cards</h2>
+    <div class="terms-grid">
+      <div class="term-card">
+        <div class="term">Recreation</div>
+        <div class="def">Activities done during leisure time to refresh and balance life</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Leisure time</div>
+        <div class="def">Free time when not working or studying</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Peak season</div>
+        <div class="def">Periods when many people travel, such as Easter and Christmas</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Budget airline</div>
+        <div class="def">Low-cost airlines offering cheaper airfares than traditional carriers</div>
+      </div>
+      <div class="term-card">
+        <div class="term">High-speed rail</div>
+        <div class="def">Fast railway connecting cities, e.g. Guangzhou–Shenzhen–Hong Kong Express Rail Link</div>
+      </div>
+      <div class="term-card">
+        <div class="term">HK-Zh-Macao Bridge</div>
+        <div class="def">Bridge connecting Hong Kong, Zhuhai, and Macao, reducing travel time</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Kai Tak Cruise Terminal</div>
+        <div class="def">Cruise terminal in Hong Kong that develops cruise tourism</div>
+      </div>
+      <div class="term-card">
+        <div class="term">One-stop travel service</div>
+        <div class="def">Service that allows booking transport, hotel, and tours all in one place</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Paid annual leave</div>
+        <div class="def">Paid time off from work that employees are entitled to by law</div>
+      </div>
+      <div class="term-card">
+        <div class="term">Travel agency</div>
+        <div class="def">A business that arranges travel and accommodation for tourists</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- PRACTICE QUESTIONS -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="questions">Exam-style practice questions</h2>
+
+    <h3>Multiple Choice (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q1</div>
+      <div class="q-text">Which of the following is NOT a recreational activity?</div>
+      <div class="mc-options">
+        A. Visiting attractions<br>
+        B. <span class="correct">Working overtime</span><br>
+        C. Enjoying food and shopping<br>
+        D. Joining sports events
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q2</div>
+      <div class="q-text">Why is recreation important?</div>
+      <div class="mc-options">
+        A. It increases working hours<br>
+        B. <span class="correct">It refreshes our minds and keeps us healthy</span><br>
+        C. It reduces leisure time<br>
+        D. It makes people more stressed
+      </div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q3</div>
+      <div class="q-text">Which of the following makes it possible for HK people to travel abroad?</div>
+      <div class="mc-options">
+        A. Limited transport options<br>
+        B. <span class="correct">High income level and paid annual leave</span><br>
+        C. Fewer public holidays<br>
+        D. Expensive airfares
+      </div>
+    </div>
+
+    <h3>True or False (1 mark each)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q4</div>
+      <div class="q-text">"Recreation is only for physical health."</div>
+      <div class="answer"><strong>False</strong> — recreation keeps both our minds and bodies healthy.</div>
+    </div>
+
+    <div class="q-box">
+      <div class="q-label">Q5</div>
+      <div class="q-text">"Budget airlines make travel more expensive."</div>
+      <div class="answer"><strong>False</strong> — budget airlines offer cheaper airfares, making travel more affordable.</div>
+    </div>
+
+    <h3>Structured Question (6 marks)</h3>
+
+    <div class="q-box">
+      <div class="q-label">Q6</div>
+      <div class="q-text">
+        <p><strong>(a)</strong> Explain why recreation is important. (2 marks)</p>
+        <p><strong>(b)</strong> Describe two factors that enable Hong Kong people to travel outside Hong Kong. (4 marks)</p>
+      </div>
+      <div class="answer">
+        <strong>Suggested structure:</strong><br>
+        (a) Recreation helps refresh ourselves after work or study, which makes us tired and stressed. It balances our life and keeps our minds and bodies healthy.<br>
+        (b) Factor 1: High income level — HK people generally have a high income, so they can afford to travel. Factor 2: Convenient transport — budget airlines offer cheaper airfares; the high-speed rail and HK-Zh-Macao Bridge provide direct links to the mainland, making short trips easy.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- CHECKLIST -->
+  <!-- ============================================ -->
+  <div class="section">
+    <h2 id="checklist">✅ Revision checklist</h2>
+    <p style="font-size:.88rem; color:#555; margin-bottom:10px;">Tick each box as you revise:</p>
+    <ul class="checklist">
+      <li>I can define recreation and explain why it is important</li>
+      <li>I can describe the characteristics of HK people travelling abroad (increasing numbers, peak seasons)</li>
+      <li>I can list reasons why people travel (visiting attractions, culture, events, food, shopping, relaxation)</li>
+      <li>I can explain how high income level enables HK people to travel</li>
+      <li>I can explain how long holidays (paid annual leave, public holidays) make travel possible</li>
+      <li>I can describe how convenient and cheaper transport enables travel (budget airlines, high-speed rail, HK-Zh-Macao Bridge, Kai Tak Cruise Terminal)</li>
+      <li>I can explain the role of advertisements, TV programmes, and one-stop travel services</li>
+      <li>I can structure a 6-mark answer using the point-explanation-example framework</li>
+    </ul>
+  </div>
+
+  <div style="text-align:center; padding:20px 0 10px; font-size:.8rem; color:var(--text-muted);">
+    E7 Tourism · S1 Geography Final Revision · 23 June 2026
+  </div>
+
+</div>
+</body>
+</html>
