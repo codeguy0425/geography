@@ -1,4 +1,4 @@
-const CACHE = 's1-geo-v5';
+const CACHE = 's1-geo-v6';
 const URLS = [
   '.',
   'index.html',
